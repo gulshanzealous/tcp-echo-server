@@ -1,0 +1,17 @@
+{
+  "name": "tcp-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "build": "npm install",
+    "deploy": "export NODE_ENV='production' && npm install && npm install pm2 -g && pm2 start server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.18.5",
+    "winston": "^3.1.0"
+  }
+}
