@@ -4,7 +4,7 @@ const logger = require('./loggerSetup')
 const server = net.createServer((socket) => {
     // socket.end('goodbye\n');
     socket.on("data",(data)=>{
-        // logger.info(data)
+        logger.info(data.toString())
         socket.write(`acknowldged by server at : ${JSON.stringify(server.address())} \n`);
         socket.write(data.toString())
         socket.pipe(socket);
